@@ -54,16 +54,33 @@ header {
 }
 .homeBanner {
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
     ),
     url("https://www.matific.com/static/ui/img/Background_Desktop@2x.webp");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center !important;
   background-size: cover;
 }
 .banner__image {
   animation: upDown 1s infinite alternate !important;
+  width: 80%;
+}
+.overview__container {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("https://t4.ftcdn.net/jpg/05/18/77/63/360_F_518776302_XZQkgR5kuSZyuchfvOT2jT0dhvj3E7BB.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.counter__bg {
+  background-image: url("https://w0.peakpx.com/wallpaper/537/441/HD-wallpaper-anime-night-building-trees-scenery-school-background-anime.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* ******************************* All Animation Keyframe Here ******************************* */

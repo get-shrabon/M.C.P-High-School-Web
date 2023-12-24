@@ -10,8 +10,8 @@ const Banner = () => {
   return (
     <div className=" homeBanner flex items-center ">
       <div className="grid container mx-auto sm:grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 xl:py-52 lg:py-36 md:py-20 sm:py-20 ">
-        <div data-aos="fade-down">
-          <h5 className="font-bold text-slate-600">Wellcome To</h5>
+        <div data-aos="fade-down" className="pl-5">
+          <h5 className="font-bold text-slate-600 text-2xl">Wellcome To</h5>
           <h1 className="md:text-6xl sm:text-2xl my-3 font-bold first-letter:text-yellow-400 text-slate-800">
             Murari Chand High School, Fatepur
           </h1>
@@ -28,7 +28,7 @@ const Banner = () => {
           </button>
         </div>
         <div data-aos="flip-right">
-          <img className="banner__image" src={BannerImg} alt="" />
+          <img className="banner__image mx-auto" src={BannerImg} alt="" />
         </div>
       </div>
     </div>
