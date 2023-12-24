@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "teacher_name": "John Smith",
+    "teacher_category": "Mathematics",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRTfFmcss6MzS15DBV0y_-7tpkMkHqA-lBs0FRcyIDtt0BLS4oQ5mP0xns46gWFz4vt8&usqp=CAU",
+    "short_description": "Passionate about numbers and problem-solving, Mr. Smith is an experienced mathematics teacher with a knack for making complex concepts easy to understand."
+  },
+  {
+    "id": 2,
+    "teacher_name": "Mary Johnson",
+    "teacher_category": "English",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp5HDjDPRN6x4LMZ3OIJLejrdnaILx7BybY_btZyE5AX09zVE8HsfnZ-CNzxSMs96xgqU&usqp=CAU",
+    "short_description": "Ms. Johnson is an inspiring English teacher who instills a love for literature in her students. Her interactive teaching style engages students in the world of words."
+  },
+  {
+    "id": 3,
+    "teacher_name": "Robert Davis",
+    "teacher_category": "Science",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB9ved01NTywuoYHhRKbkVB9W1IavBW3IAri_IBADl6M-knD--tMI821eA59g2BN91Hug&usqp=CAU",
+    "short_description": "With a background in biology, Mr. Davis brings the wonders of science to life. He encourages hands-on learning and fosters a curiosity about the natural world."
+  },
+  {
+    "id": 4,
+    "teacher_name": "Emily White",
+    "teacher_category": "History",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3fcYmldjdkFWNlzjumuYVTGIzOirjZM4LrbJYludYggIfCChRavgWwFIA_XVTeQiqZ0&usqp=CAU",
+    "short_description": "History comes alive in Ms. White's class as she weaves engaging narratives of the past. Her dynamic teaching style sparks students' interest in historical events."
+  },
+  {
+    "id": 5,
+    "teacher_name": "Michael Brown",
+    "teacher_category": "Physical Education",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAlNze0rQq_kQfttZL4-2txpGs8kkAk8IWFFEtrJF1oTa9BDQ3lB4OHustr1iI25lRu6E&usqp=CAU",
+    "short_description": "Coach Brown is not just about fitness; he instills the importance of a healthy lifestyle in his students. His classes are a perfect blend of fun and fitness."
+  },
+  {
+    "id": 6,
+    "teacher_name": "Jennifer Miller",
+    "teacher_category": "Art",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShSiQom_ErnxNhj_eko41T2-ZMxpM1ZZUgAgjGP_v83VLD-MXUOZkMX2ucbJuu3TsD_y0&usqp=CAU",
+    "short_description": "Ms. Miller's art class is a creative haven where students explore various forms of artistic expression. Her passion for art is contagious, inspiring young artists."
+  },
+  {
+    "id": 7,
+    "teacher_name": "David Wilson",
+    "teacher_category": "Computer Science",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP6XZshjxK9t7nfSKmdgpFmAaDP40W1UWXa8gKYqINmfzZ5Hh-77OVroNpdmfE0wMrI3A&usqp=CAU",
+    "short_description": "Mr. Wilson is a tech enthusiast who introduces students to the world of coding and computer science. His classes focus on problem-solving and innovation."
+  },
+  {
+    "id": 8,
+    "teacher_name": "Amanda Jones",
+    "teacher_category": "Foreign Language",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ItDnPq2yCtF8-mRTUOVywhvdG1Ex6sIUw-isieq-cJDLUvVg6Z-B71GiGkjnUf0E5dk&usqp=CAU",
+    "short_description": "With a passion for languages, Ms. Jones teaches students the beauty of expressing themselves in a foreign tongue. Her classes are culturally enriching."
+  },
+  {
+    "id": 9,
+    "teacher_name": "Daniel Smith",
+    "teacher_category": "Music",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn6QzDDiV2gXlPdvlnBxxjT_qfBbKYAjHWqvYRWJTgJGCH9-dpUr5Dok_GlKVOYxYlJNY&usqp=CAU",
+    "short_description": "Mr. Smith is a maestro in the making, guiding students through the world of melodies and harmonies. His music classes are a delightful journey into sound."
+  },
+  {
+    "id": 10,
+    "teacher_name": "Olivia Taylor",
+    "teacher_category": "Chemistry",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSozeOSHIKwdfewRLFekT0w-6oUs7u7oS-I4iU3DJt3mKHVNZqOAmYuL62W_bae8zlYPdM&usqp=CAU",
+    "short_description": "Chemistry becomes captivating in Ms. Taylor's class as she conducts exciting experiments. Her enthusiasm for the subject sparks curiosity in her students."
+  },
+  {
+    "id": 11,
+    "teacher_name": "Brian Green",
+    "teacher_category": "Economics",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq53UH0KPI6dgyUpck7Deg_M6RVzHUTQA03oTfLRyTkCBawtk4hwGcxAbD4kQ8UbkuyC8&usqp=CAU",
+    "short_description": "Mr. Green simplifies the complexities of economics, making it an engaging subject for students. His real-world examples connect theory to practice."
+  },
+  {
+    "id": 12,
+    "teacher_name": "Sophia Clark",
+    "teacher_category": "Physical Education",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrxuuuaS0X7aJY-86dvHrWVWP3OwxITwmf5id8KjNb2_qSqLSD_ewf9GV1tIKoQPnu2PE&usqp=CAU",
+    "short_description": "Coach Clark is dedicated to promoting physical fitness and well-being. Her energetic approach to PE motivates students to lead active and healthy lives."
+  },
+  {
+    "id": 13,
+    "teacher_name": "Ethan Turner",
+    "teacher_category": "Physics",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaTdns-QFXPAZbiw_w1k5X0aeWnqzZ6MyDtus9D_eRV6v0zUJJRB0Mz-_0aWfU4ebscnk&usqp=CAU",
+    "short_description": "Mr. Turner explores the wonders of the universe through physics. His demonstrations and experiments make complex concepts accessible and intriguing."
+  },
+  {
+    "id": 14,
+    "teacher_name": "Lily Adams",
+    "teacher_category": "Drama",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeA4fZFeolHEv9ioRr_bUR2jsd0-Lgd-xfI0XjpsvLz_9jNbM9b5gYHtXmOCp9vtvOrco&usqp=CAU",
+    "short_description": "Ms. Adams directs the drama department with passion, encouraging students to express themselves through the art of acting. Her productions are a highlight of the school year."
+  },
+  {
+    "id": 15,
+    "teacher_name": "Andrew Martin",
+    "teacher_category": "Geography",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFvCwIZzevxx2y5C1-bxxbtfXDrPCX7j7OmkCRw7N5WxWUFe1dXTn16qFCRhISztQEOuA&usqp=CAU",
+    "short_description": "Geography comes alive in Mr. Martin's class as he explores the diverse landscapes of the world. His interactive lessons spark a curiosity about global cultures."
+  }
+]
