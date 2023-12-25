@@ -31,7 +31,7 @@ const SchoolPeoples = () => {
             <FaSchoolFlag className="text-8xl mx-auto"></FaSchoolFlag>
             <h3 className="text-4xl text-white text-center my-3">
               {counter && (
-                <CountUp start={0} end={10} duration={2.75}></CountUp>
+                <CountUp start={0} end={15} duration={2.75}></CountUp>
               )}
               +
             </h3>
