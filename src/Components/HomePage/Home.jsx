@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import OverView from "./OverView";
 import SchoolPeoples from "./SchoolPeoples";
 import Teachers from "../Teachers/Teachers";
+import Blogs from "../Blogs/Blogs";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <OverView></OverView>
             <SchoolPeoples></SchoolPeoples>
             <Teachers></Teachers>
+            <Blogs></Blogs>
         </div>
     );
 };

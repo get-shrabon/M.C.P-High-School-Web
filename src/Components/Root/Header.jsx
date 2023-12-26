@@ -13,7 +13,7 @@ const Header = () => {
     </>
     return (
       <Headroom>
-        <header className="shadow">
+        <header className="">
           <nav className="navbar mx-auto container">
             <div className="navbar-start">
               <div className="dropdown">

@@ -16,10 +16,10 @@ h6 {
 .logo__main {
   width: 80px;
   height: 80px;
-  animation: rotate 10s linear infinite;
 }
 header {
-  background-image: linear-gradient(white, white);
+  background-image: linear-gradient(to top, white, rgba(253, 242, 242, 0.991));
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 255, 0.065);
 }
 
 .active {
@@ -66,6 +66,7 @@ header {
   animation: upDown 1s infinite alternate !important;
   width: 80%;
 }
+
 .overview__container {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.7),
@@ -88,7 +89,25 @@ header {
   background-position: top;
   background-size: cover;
 }
-
+.blogs__container {
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.blog{
+    overflow: hidden;
+    transition: .3s all;
+}
+.blog:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.blog:hover img{
+    scale: calc(1.1);
+}
+.blog:hover h1{
+   color: gold;
+}
 /* ******************************* All Animation Keyframe Here ******************************* */
 
 @keyframes upDown {
@@ -108,11 +127,4 @@ header {
     gap: 20px;
   }
 }
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+

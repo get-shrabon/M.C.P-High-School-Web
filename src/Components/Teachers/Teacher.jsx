@@ -1,10 +1,15 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Teacher = ({ teacher }) => {
-  const { teacher_name, teacher_category, image_url, id} = teacher;
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+  const { teacher_name, teacher_category, image_url, id } = teacher;
   return (
-    <div className="text-center">
+    <div data-aos="fade-left" className="text-center">
       <div className="bg-info py-5">
         <img
           className="rounded-full p-5 shadow-md mx-auto w-[150px] h-[150px] object-cover"
