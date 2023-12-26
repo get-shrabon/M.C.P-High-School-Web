@@ -9,6 +9,7 @@ import Ourteacher from "./Components/OurTeacherPage/Ourteacher";
 import Blogs from "./Components/BlogsPage/Blogs";
 import Contact from "./Components/ContactPage/Contact";
 import { HelmetProvider } from "react-helmet-async";
+import TeacherDetails from "./Components/Teachers/TeacherDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/singleTeacher/:id",
+        element: <TeacherDetails></TeacherDetails>,
+        loader: () => fetch("Teachers-Data.json"),
       },
     ],
   },

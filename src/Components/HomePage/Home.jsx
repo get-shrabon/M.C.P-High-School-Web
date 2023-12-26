@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Banner from "./Banner";
 import OverView from "./OverView";
 import SchoolPeoples from "./SchoolPeoples";
+import Teachers from "../Teachers/Teachers";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <OverView></OverView>
             <SchoolPeoples></SchoolPeoples>
+            <Teachers></Teachers>
         </div>
     );
 };
