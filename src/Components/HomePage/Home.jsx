@@ -5,6 +5,7 @@ import OverView from "./OverView";
 import SchoolPeoples from "./SchoolPeoples";
 import Teachers from "../Teachers/Teachers";
 import Blogs from "../Blogs/Blogs";
+import Gallery from "./Gallery";
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <SchoolPeoples></SchoolPeoples>
             <Teachers></Teachers>
             <Blogs></Blogs>
+            <Gallery></Gallery>
         </div>
     );
 };
