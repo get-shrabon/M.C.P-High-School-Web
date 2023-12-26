@@ -109,6 +109,22 @@ header {
 .blog:hover h1{
    color: gold;
 }
+.CTA__container{
+  background-image: url("https://www.slidebackground.com/uploads/education-ppt-background/student-working-class-education-background-powerpoint-wallpaper-19.jpg");
+    background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.cta__info{
+  border: 1px solid gold;
+  backdrop-filter: blur(30px);
+  color: black;
+  padding: 40px;
+  border-radius: 5px;
+}
+.cta__info input:focus{
+  outline: none;
+}
 /* ******************************* All Animation Keyframe Here ******************************* */
 
 @keyframes upDown {
