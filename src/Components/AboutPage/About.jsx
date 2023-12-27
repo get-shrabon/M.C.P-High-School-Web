@@ -1,13 +1,19 @@
+import OverView from "../HomePage/OverView";
+import AboutBanner from "./AboutBanner";
+import Success from "./Success";
+import Gellary from "../HomePage/Gallery"
 
 
 const About = () => {
-    return (
-      <div>
-        <h1 className="text-4xl  font-bold text-center">
-          This is About Component
-        </h1>
-      </div>
-    );
+  return (
+    <div>
+      <AboutBanner></AboutBanner>
+      <OverView></OverView>
+      <Success></Success>
+      <Gellary></Gellary>
+     
+    </div>
+  );
 };
 
 export default About;
