@@ -134,6 +134,14 @@ header {
 .blog__banner{
   background-image:linear-gradient(to top, rgba(255, 217, 0, 0.396), rgba(255, 217, 0, 0.687)) , url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg");
 }
+.contact__banner{
+  background-image:linear-gradient(to top, rgba(255, 217, 0, 0.396), rgba(255, 217, 0, 0.687)) , url("https://www.idfreshfood.com/wp-content/uploads/2017/09/contact_us_2.jpg");
+}
+.contact__info{
+  background-image:linear-gradient(to right, rgba(255, 217, 0, 1), rgba(255, 217, 0, 0.5));
+  margin-top: -100px;
+  margin-bottom: 50px;
+}
 /* ******************************* All Animation Keyframe Here ******************************* */
 
 @keyframes upDown {
