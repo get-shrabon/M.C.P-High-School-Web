@@ -96,51 +96,103 @@ header {
   background-position: top;
   background-size: cover;
 }
-.blog{
-    overflow: hidden;
-    transition: .3s all;
+.blog {
+  overflow: hidden;
+  transition: 0.3s all;
 }
-.blog:hover{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+.blog:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.blog:hover img{
-    scale: calc(1.1);
+.blog:hover img {
+  scale: calc(1.1);
 }
-.blog:hover h1{
-   color: gold;
+.blog:hover h1 {
+  color: gold;
 }
-.CTA__container{
+.CTA__container {
   background-image: url("https://www.slidebackground.com/uploads/education-ppt-background/student-working-class-education-background-powerpoint-wallpaper-19.jpg");
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
 }
-.cta__info{
+.cta__info {
   border: 1px solid gold;
   backdrop-filter: blur(30px);
   color: black;
   padding: 40px;
   border-radius: 5px;
 }
-.cta__info input:focus{
+.cta__info input:focus {
   outline: none;
 }
-.about__banner{
-  background-image:linear-gradient(to top, rgba(255, 217, 0, 0.396), rgba(255, 217, 0, 0.687)) ,url("https://wallpapers.com/images/hd/school-background-pdx3rkmcq5zlpunn.jpg");
+.about__banner {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 217, 0, 0.396),
+      rgba(255, 217, 0, 0.687)
+    ),
+    url("https://wallpapers.com/images/hd/school-background-pdx3rkmcq5zlpunn.jpg");
 }
-.teacher__banner{
-  background-image:linear-gradient(to top, rgba(255, 217, 0, 0.396), rgba(255, 217, 0, 0.687)) ,url("https://dikshantinternational.org/images/Dikshant-Junior-Teachers-group.jpg");
+.teacher__banner {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 217, 0, 0.396),
+      rgba(255, 217, 0, 0.687)
+    ),
+    url("https://dikshantinternational.org/images/Dikshant-Junior-Teachers-group.jpg");
 }
-.blog__banner{
-  background-image:linear-gradient(to top, rgba(255, 217, 0, 0.396), rgba(255, 217, 0, 0.687)) , url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg");
+.blog__banner {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 217, 0, 0.396),
+      rgba(255, 217, 0, 0.687)
+    ),
+    url("https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg");
 }
-.contact__banner{
-  background-image:linear-gradient(to top, rgba(255, 217, 0, 0.396), rgba(255, 217, 0, 0.687)) , url("https://www.idfreshfood.com/wp-content/uploads/2017/09/contact_us_2.jpg");
+.contact__banner {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 217, 0, 0.396),
+      rgba(255, 217, 0, 0.687)
+    ),
+    url("https://www.idfreshfood.com/wp-content/uploads/2017/09/contact_us_2.jpg");
 }
-.contact__info{
-  background-image:linear-gradient(to right, rgba(255, 217, 0, 1), rgba(255, 217, 0, 0.5));
+.contact__info {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 217, 0, 1),
+    rgba(255, 217, 0, 0.5)
+  );
   margin-top: -100px;
   margin-bottom: 50px;
+}
+.form__container {
+  padding: 15px;
+  background-color: whitesmoke;
+}
+.form__container p {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.signUp__bg {
+  background-image: url("https://themeknit.com/demo/html/authfy/demo/images/computer-1867758_1920-min.jpg");
+}
+.sign__left{
+background-color: rgba(38, 43, 72, 0.92);
+    color: #ffffff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-box-shadow: 0px 3px 6px #1d2030;
+    box-shadow: 0px 3px 6px #1d2030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+.login__container{
+  background-image: url("https://wallpapers.com/images/hd/card-background-yimftl0fv74bxy4e.jpg");
 }
 /* ******************************* All Animation Keyframe Here ******************************* */
 
@@ -161,4 +213,3 @@ header {
     gap: 20px;
   }
 }
-

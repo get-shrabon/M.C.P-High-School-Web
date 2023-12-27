@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BlogBanner from "./BlogBanner";
+import { Helmet } from "react-helmet-async";
 
 
 const Blogs = () => {
@@ -14,6 +15,9 @@ const Blogs = () => {
    }, []);
   return (
     <div>
+      <Helmet>
+        <title>M.C.P | Blogs</title>
+      </Helmet>
       <BlogBanner></BlogBanner>
       <div className="blogs__container py-20">
         <div className="text-center">

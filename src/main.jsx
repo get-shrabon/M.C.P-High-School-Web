@@ -10,6 +10,9 @@ import Blogs from "./Components/BlogsPage/Blogs";
 import Contact from "./Components/ContactPage/Contact";
 import { HelmetProvider } from "react-helmet-async";
 import TeacherDetails from "./Components/Teachers/TeacherDetails";
+import AuthProvider from "./Providers/AuthProvider";
+import SignUp from "./Components/SignUpAndIn/SignUp";
+import Login from "./Components/SignUpAndIn/Login";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,14 +43,24 @@ const router = createBrowserRouter([
         element: <TeacherDetails></TeacherDetails>,
         loader: () => fetch("Teachers-Data.json"),
       },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path:"/login",
+        element:<Login></Login>
+      }
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HelmetProvider>
-      <RouterProvider router={router} />
-    </HelmetProvider>
+    <AuthProvider>
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
+    </AuthProvider>
   </React.StrictMode>
 );

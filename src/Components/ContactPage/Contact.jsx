@@ -2,9 +2,13 @@ import { IoIosSend } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 const Contact = () => {
   return (
     <div>
+      <Helmet>
+        <title>M.C.P | Contact</title>
+      </Helmet>
       <div className="contact__banner py-32 pb-56 2xl:py-52 bg-no-repeat bg-center bg-cover text-center">
         <h1 className="text-4xl font-bold text-white">Get in Touch with Us</h1>
       </div>
