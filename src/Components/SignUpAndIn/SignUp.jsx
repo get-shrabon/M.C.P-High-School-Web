@@ -2,19 +2,61 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/Logo.png";
 import { CiLogin } from "react-icons/ci";
 import { FaFacebook, FaGoogle, FaXTwitter } from "react-icons/fa6";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
 const SignUp = () => {
+  const { createUser,setUser } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [showPass, setShowPass] = useState(null);
+
   const handleSignUp = (e) => {
     e.preventDefault();
+    setErrorMessage("");
+    setSuccessMessage("");
     const email = e.target.email.value;
     const password = e.target.password.value;
     const name = e.target.name.value;
     const condition = e.target.terms.checked;
-    console.log(email, password, name, condition);
+    console.log(name)
+    // Validation Form
+    {
+      if (!condition) {
+        setErrorMessage("Please Accept Our Conditions!");
+        return;
+      } else if (password < 6) {
+        setErrorMessage("Password must be at least 6 characters long");
+        return;
+      } else if (!/[A-Z]/.test(password)) {
+        setErrorMessage("Password must contain at least one uppercase letter");
+        return;
+      } else if (!/[a-z]/.test(password)) {
+        setErrorMessage("Password must contain at least one lowercase letter");
+        return;
+      }
+    }
+    // Create User
+    createUser(email, password)
+      .then((result) => {
+        setSuccessMessage("Your Account Create Successful");
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL:
+            "https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp",
+        });
+        setUser(result.user)
+      })
+      .catch((Error) => {
+        setErrorMessage(Error.message);
+      });
   };
   return (
     <div className="signUp__bg py-20">
       <div className="p-10 container mx-auto w-[fit-content] sign__up bg-no-repeat bg-center bg-cover rounded shadow-md grid lg:grid-cols-2 sm:grid-cols-1">
-        <div className="sign__left ">
+        <div className="sign__left rounded">
           <div>
             <img
               className="w-[100px] mx-auto mb-3 bg-white rounded-full"
@@ -35,8 +77,8 @@ const SignUp = () => {
             </button>
           </div>
         </div>
-        <form onSubmit={handleSignUp} className="form__container ">
-          <h2 className="text-center text-black font-bold text-3xl mb-5">
+        <form onSubmit={handleSignUp} className="form__container rounded">
+          <h2 className="text-center text-black font-mono first-letter:text-yellow-500 font-bold text-3xl mb-5">
             Sign Up for Free
           </h2>
           <div>
@@ -63,14 +105,32 @@ const SignUp = () => {
           </div>
           <div>
             <p>New Password</p>
-            <input
-              className="bg-transparent border-b rounded-xl border-[gold] lg:w-full sm:w-full focus:outline-none py-2 px-3 text-black"
-              type="password"
-              name="password"
-              id=""
-              placeholder="type here..."
-              required
-            />
+            <div className="flex items-center">
+              <input
+                className="bg-transparent border-b rounded-xl border-[gold] lg:w-full sm:w-full focus:outline-none py-2 px-3 text-black"
+                type={showPass ? "text" : "password"}
+                name="password"
+                id=""
+                placeholder="type here..."
+                required
+              />
+              <span
+                onClick={() => setShowPass(!showPass)}
+                className="ml-[-40px] cursor-pointer"
+              >
+                {!showPass ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+              </span>
+            </div>
+          </div>
+          <div>
+            {successMessage && (
+              <p className="success__message text-[14px]">{successMessage}</p>
+            )}
+          </div>
+          <div>
+            {errorMessage && (
+              <p className="error__message text-[14px]">{errorMessage}</p>
+            )}
           </div>
           <div className="flex justify-between items-center mt-4">
             <div className="flex items-center gap-2">

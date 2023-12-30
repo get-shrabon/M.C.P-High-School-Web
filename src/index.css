@@ -194,6 +194,12 @@ background-color: rgba(38, 43, 72, 0.92);
 .login__container{
   background-image: url("https://wallpapers.com/images/hd/card-background-yimftl0fv74bxy4e.jpg");
 }
+.success__message{
+  color: #28a745 !important;
+}
+.error__message{
+  color: #dc3545 !important;
+}
 /* ******************************* All Animation Keyframe Here ******************************* */
 
 @keyframes upDown {
