@@ -77,7 +77,7 @@ const Header = () => {
             </div>
             <Link className="flex items-center gap-1" to="/">
               <img className="logo__main" src={Logo} alt="" />
-              <h4 className="font-mono font-semibold text-slate-600 first-letter:text-yellow-500">
+              <h4 className="font-mono text-nowrap font-semibold text-slate-600 first-letter:text-yellow-500">
                 M.C.P High School
               </h4>
             </Link>
@@ -86,7 +86,7 @@ const Header = () => {
             <ul className="menu menu-horizontal px-1">{navLinks}</ul>
           </div>
           {user && (
-            <div>
+            <div className="md:navbar-end sm:navbar-end">
               <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button" className="ml-5">
                   <img

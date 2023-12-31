@@ -6,6 +6,9 @@ body {
   @apply bg-white;
   overflow-x: hidden !important;
 }
+#root{
+  overflow-x: hidden !important;
+}
 h1,
 h2,
 h3,
@@ -217,5 +220,15 @@ background-color: rgba(38, 43, 72, 0.92);
   }
   50% {
     gap: 20px;
+  }
+}
+
+@media screen and (max-width:576px ) {
+  .cta__info{
+    padding: 0px !important;
+    border: none;
+  }
+  .navbar{
+    justify-content: space-between;
   }
 }
