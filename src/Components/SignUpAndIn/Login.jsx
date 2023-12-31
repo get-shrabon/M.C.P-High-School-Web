@@ -1,18 +1,43 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import boyImage from "../../assets/login-page-image.png";
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+ import { ToastContainer, toast } from "react-toastify";
+ import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { userLogin } = useContext(AuthContext);
+  const { userLogin, googleLogIn, facebookLogin } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [showPass, setShowPass] = useState(null);
+  const navigate = useNavigate()
+  // Sign In With Google PopUp
+  const handleGoogleLogIn = () => {
+    googleLogIn()
+      .then(() => {
+        toast.success("User Loggin Successfull")
+        navigate("/")
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+  // Sign In With Facebook PopUp
+  const handleFbLogIn = () =>{
+    facebookLogin()
+      .then(() => {
+        toast.success("User Loggin Successfull");
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  }
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -35,7 +60,9 @@ const Login = () => {
     // Login User
     userLogin(email, password)
       .then(() => {
-        setSuccessMessage(`Welcome, ${name} ! Login successful.`);
+        toast.success(`Welcome, ${name} ! Login successful.`);
+        e.target.reset()
+        navigate("/")
       })
       .catch((error) => {
         setErrorMessage(error.message);
@@ -56,6 +83,18 @@ const Login = () => {
                 Sign Up
               </Link>
             </p>
+            <ToastContainer
+              position="top-center"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="colored"
+            />
             <div className="mb-3">
               <p className="text-slate-500 font-semibold">Your Full Name</p>
               <input
@@ -118,10 +157,16 @@ const Login = () => {
             <div className="w-full h-[1px] bg-slate-300"></div>
           </div>
           <div className="flex justify-center gap-3">
-            <button className="btn btn-outline btn-error">
+            <button
+              onClick={handleGoogleLogIn}
+              className="btn btn-outline btn-error"
+            >
               <FaGoogle></FaGoogle> Google
             </button>
-            <button className="btn btn-outline btn-primary">
+            <button
+              onClick={handleFbLogIn}
+              className="btn btn-outline btn-primary"
+            >
               <FaFacebook></FaFacebook> Facebook
             </button>
           </div>

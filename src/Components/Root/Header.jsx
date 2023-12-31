@@ -3,15 +3,20 @@ import Logo from "../../assets/Logo.png";
 import Headroom from "react-headroom";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { FaEye } from "react-icons/fa6";
-import { RiLogoutCircleRLine } from "react-icons/ri";
+import { FaEye, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa6";
+import LogoutButton from "../../assets/Logout.png";
 import { FaRegHandPointRight } from "react-icons/fa";
+ import { ToastContainer, toast } from "react-toastify";
+ import "react-toastify/dist/ReactToastify.css";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   const handleLogOut = () => {
-    logOut();
+    logOut()
+    .then(() => {
+      toast.warn("Account LoggOut Successfull");
+    })
   };
   const navLinks = (
     <>
@@ -30,9 +35,11 @@ const Header = () => {
       <li>
         <NavLink to="/contact">Contact</NavLink>
       </li>
-      <li>
-        <NavLink to="/login">Login</NavLink>
-      </li>
+      {!user && (
+        <li>
+          <NavLink to="/login">Login</NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -88,33 +95,59 @@ const Header = () => {
                     alt=""
                   />
                 </div>
+              <ToastContainer></ToastContainer>
                 <div
                   tabIndex={0}
-                  className="menu dropdown-content z-[1] p-2 shadow bg-yellow-100 rounded-box w-52 mt-4"
+                  className="menu dropdown-content z-[1] p-4 shadow bg-yellow-100 rounded-box border-b-4  border-yellow-500 w-[auto] mt-4"
                 >
                   <img
-                    className="w-[100px] rounded-full mx-auto"
+                    className="w-[100px] rounded-full mx-auto border border-yellow-500 p-1 object-cover"
                     src="https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg"
                     alt=""
                   />
-                  <h4 className="text-black text-center text-xl font-semibold">
-                    {user.displayName}
+                  <h4 className="text-black text-center text-xl text-nowrap font-semibold">
+                    {user?.displayName}
                   </h4>
                   <h5 className="font-semibold text-center text-slate-500 mb-3 mt-1">
-                    {user.email}
+                    {user?.email}
                   </h5>
                   <button className="btn btn-warning  ">
                     View Profile <FaEye></FaEye>
                   </button>
-                  <div>
-                    <Link className="my-3 text-slate-500 flex items-center gap-2">
+                  <div className="">
+                    <Link className="my-3 text-slate-500 flex justify-center  items-center gap-2">
                       <FaRegHandPointRight></FaRegHandPointRight> Announcement
                     </Link>
-                    <span
-                      onClick={handleLogOut}
-                      className="flex items-center gap-1 underline hover:no-underline duration-500 cursor-pointer text-blue-700 text-[18px] font-semibold"
-                    >
-                      LogOut <RiLogoutCircleRLine></RiLogoutCircleRLine>
+                  </div>
+                  <div className="flex justify-between mt-4">
+                    <Link className="text-2xl text-yellow-500 hover:text-yellow-700 duration-500">
+                      {" "}
+                      <FaFacebook></FaFacebook>{" "}
+                    </Link>
+                    <Link className="text-2xl text-yellow-500 hover:text-yellow-700 duration-500">
+                      {" "}
+                      <FaLinkedin></FaLinkedin>{" "}
+                    </Link>
+                    <Link className="text-2xl text-yellow-500 hover:text-yellow-700 duration-500">
+                      {" "}
+                      <FaTwitter></FaTwitter>{" "}
+                    </Link>
+                    <Link className="text-2xl text-yellow-500 hover:text-yellow-700 duration-500">
+                      {" "}
+                      <FaInstagram></FaInstagram>{" "}
+                    </Link>
+                    <Link className="text-2xl text-yellow-500 hover:text-yellow-700 duration-500">
+                      {" "}
+                      <FaYoutube></FaYoutube>{" "}
+                    </Link>
+                  </div>
+                  <div className="mt-4">
+                    <span onClick={handleLogOut} className="cursor-pointer ">
+                      <img
+                        className="w-[50px] mx-auto border-dashed border-blue-300 rounded-full p-1"
+                        src={LogoutButton}
+                        alt=""
+                      />
                     </span>
                   </div>
                 </div>

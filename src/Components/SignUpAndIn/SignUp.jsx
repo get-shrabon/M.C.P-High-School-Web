@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/Logo.png";
 import { CiLogin } from "react-icons/ci";
 import { FaFacebook, FaGoogle, FaXTwitter } from "react-icons/fa6";
@@ -7,11 +7,50 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const SignUp = () => {
-  const { createUser,setUser } = useContext(AuthContext);
+  const { createUser, setUser, googleLogIn, twitterLogin, facebookLogin } =
+    useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [showPass, setShowPass] = useState(null);
+  const navigate = useNavigate();
+
+  // Sign In With Google PopUp
+  const handleGoogleLogIn = () => {
+    googleLogIn()
+      .then(() => {
+        toast.success("User Loggin Successfull");
+      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+      });
+  };
+  // Sign In With Facebook PopUp
+  const handleFbLogIn = () => {
+    facebookLogin()
+      .then(() => {
+        toast.success("User Loggin Successfull");
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+  // Sign In With Twitter Auth Pop Up
+
+  const handleTwitterLogin = () => {
+    twitterLogin()
+      .then(() => {
+        toast.success("User Loggin Successfull");
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -20,8 +59,9 @@ const SignUp = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const name = e.target.name.value;
+    const number = e.target.number.value;
     const condition = e.target.terms.checked;
-    console.log(name)
+    console.log(name, number);
     // Validation Form
     {
       if (!condition) {
@@ -41,13 +81,17 @@ const SignUp = () => {
     // Create User
     createUser(email, password)
       .then((result) => {
+        toast.warn("Your Account Successfully Created, Please LogIn Now!");
         setSuccessMessage("Your Account Create Successful");
         updateProfile(result.user, {
           displayName: name,
+          phoneNumber: number,
           photoURL:
             "https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp",
         });
-        setUser(result.user)
+        setUser(result.user);
+        e.target.reset();
+        navigate("/login");
       })
       .catch((Error) => {
         setErrorMessage(Error.message);
@@ -66,17 +110,27 @@ const SignUp = () => {
             <p className="mb-3 font-bold">
               Login using social media to get quick access
             </p>
-            <button className="w-full flex items-center justify-center gap-2 bg-[#3b5998] hover:bg-[#344c82] duration-500 rounded p-2 font-semibold">
+            <button
+              onClick={handleFbLogIn}
+              className="w-full flex items-center justify-center gap-2 bg-[#3b5998] hover:bg-[#344c82] duration-500 rounded p-2 font-semibold"
+            >
               Sign In with facebook <FaFacebook></FaFacebook>
             </button>
-            <button className="w-full flex items-center justify-center my-3 gap-2 bg-[#c32f10] hover:bg-[#c32e10e9] duration-500 rounded p-2 font-semibold">
+            <button
+              onClick={handleGoogleLogIn}
+              className="w-full flex items-center justify-center my-3 gap-2 bg-[#c32f10] hover:bg-[#c32e10e9] duration-500 rounded p-2 font-semibold"
+            >
               Sign In with google <FaGoogle></FaGoogle>
             </button>
-            <button className="w-full flex items-center justify-center gap-2 bg-[#00aced] hover:bg-[#00aeede5] duration-500 rounded p-2 font-semibold">
+            <button
+              onClick={handleTwitterLogin}
+              className="w-full flex items-center justify-center gap-2 bg-[#00aced] hover:bg-[#00aeede5] duration-500 rounded p-2 font-semibold"
+            >
               Sign In with twitter <FaXTwitter></FaXTwitter>
             </button>
           </div>
         </div>
+
         <form onSubmit={handleSignUp} className="form__container rounded">
           <h2 className="text-center text-black font-mono first-letter:text-yellow-500 font-bold text-3xl mb-5">
             Sign Up for Free
@@ -87,6 +141,17 @@ const SignUp = () => {
               className="bg-transparent border-b rounded-xl border-[gold] lg:w-full sm:w-full focus:outline-none py-2 px-3 text-black"
               type="text"
               name="name"
+              id=""
+              placeholder="type here..."
+              required
+            />
+          </div>
+          <div>
+            <p>Your Phone Number</p>
+            <input
+              className="bg-transparent border-b rounded-xl border-[gold] lg:w-full sm:w-full focus:outline-none py-2 px-3 text-black"
+              type="number"
+              name="number"
               id=""
               placeholder="type here..."
               required
@@ -162,6 +227,7 @@ const SignUp = () => {
           </div>
         </form>
       </div>
+      <ToastContainer position="top-center" theme="colored" />
     </div>
   );
 };
