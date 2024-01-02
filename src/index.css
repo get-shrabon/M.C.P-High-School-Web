@@ -197,6 +197,9 @@ background-color: rgba(38, 43, 72, 0.92);
 .login__container{
   background-image: url("https://wallpapers.com/images/hd/card-background-yimftl0fv74bxy4e.jpg");
 }
+.error__container{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBdbYMPv3mY2vH6g3eMgKQWnNG5TYW9a6T1A&usqp=CAU");
+}
 .success__message{
   color: #28a745 !important;
 }

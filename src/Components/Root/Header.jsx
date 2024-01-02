@@ -83,7 +83,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="navbar-end hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+            <ul className="menu md:flex-nowrap menu-horizontal px-1">{navLinks}</ul>
           </div>
           {user && (
             <div className="md:navbar-end sm:navbar-end">
