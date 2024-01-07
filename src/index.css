@@ -206,6 +206,9 @@ background-color: rgba(38, 43, 72, 0.92);
 .error__message{
   color: #dc3545 !important;
 }
+.slide__bg{
+  background-image: url("https://t4.ftcdn.net/jpg/05/18/77/63/360_F_518776302_XZQkgR5kuSZyuchfvOT2jT0dhvj3E7BB.jpg");
+}
 /* ******************************* All Animation Keyframe Here ******************************* */
 
 @keyframes upDown {

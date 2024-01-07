@@ -7,6 +7,7 @@ import Teachers from "../Teachers/Teachers";
 import Blogs from "../Blogs/Blogs";
 import Gallery from "./Gallery";
 import CTA from "./CTA";
+import Textslide from "./Textslide";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <title>M.C.P | Home</title>
            </Helmet>
             <Banner></Banner>
+            <Textslide></Textslide>
             <OverView></OverView>
             <SchoolPeoples></SchoolPeoples>
             <Teachers></Teachers>
