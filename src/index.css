@@ -6,7 +6,7 @@ body {
   @apply bg-white;
   overflow-x: hidden !important;
 }
-#root{
+#root {
   overflow-x: hidden !important;
 }
 h1,
@@ -181,32 +181,32 @@ header {
 .signUp__bg {
   background-image: url("https://themeknit.com/demo/html/authfy/demo/images/computer-1867758_1920-min.jpg");
 }
-.sign__left{
-background-color: rgba(38, 43, 72, 0.92);
-    color: #ffffff;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    -webkit-box-shadow: 0px 3px 6px #1d2030;
-    box-shadow: 0px 3px 6px #1d2030;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
+.sign__left {
+  background-color: rgba(38, 43, 72, 0.92);
+  color: #ffffff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -webkit-box-shadow: 0px 3px 6px #1d2030;
+  box-shadow: 0px 3px 6px #1d2030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
 }
-.login__container{
+.login__container {
   background-image: url("https://wallpapers.com/images/hd/card-background-yimftl0fv74bxy4e.jpg");
 }
-.error__container{
+.error__container {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBdbYMPv3mY2vH6g3eMgKQWnNG5TYW9a6T1A&usqp=CAU");
 }
-.success__message{
+.success__message {
   color: #28a745 !important;
 }
-.error__message{
+.error__message {
   color: #dc3545 !important;
 }
-.slide__bg{
+.slide__bg {
   background-image: url("https://t4.ftcdn.net/jpg/05/18/77/63/360_F_518776302_XZQkgR5kuSZyuchfvOT2jT0dhvj3E7BB.jpg");
 }
 /* ******************************* All Animation Keyframe Here ******************************* */
@@ -229,12 +229,12 @@ background-color: rgba(38, 43, 72, 0.92);
   }
 }
 
-@media screen and (max-width:576px ) {
-  .cta__info{
+@media screen and (max-width: 576px) {
+  .cta__info {
     padding: 0px !important;
     border: none;
   }
-  .navbar{
+  .navbar {
     justify-content: space-between;
   }
 }
