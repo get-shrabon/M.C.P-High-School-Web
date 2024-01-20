@@ -6,7 +6,7 @@ const Textslide = () => {
       <button className="bg-yellow-500 text-nowrap py-3 px-4 select-none cursor-cell rounded-lg text-white font-bold">
         Latest Announce
       </button>
-      <Marquee autoFill={true} pauseOnHover={true} className="shadow py-3">
+      <Marquee autoFill={true} pauseOnHover={true} className=" py-3">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam amet
           eligendi unde consectetur vitae quam reprehenderit?
